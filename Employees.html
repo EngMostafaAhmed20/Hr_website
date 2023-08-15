@@ -1,0 +1,78 @@
+<head>
+
+    <title>Employee</title>
+    <link rel="stylesheet" href="Css/master.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/java.js"></script>
+    <!--this line To execute the $   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class ="body_gana" onload="loadNavbar()">
+
+  
+  <div id="navbar-container">
+
+
+  </div>
+
+  <!-- <h1 class="h_gana">Employees</h1> -->
+<div class="search_div">
+  <input type="text" placeholder="Search for an Employee" class="search-bar"  id="search-input2"> 
+</div>
+    <div class="table-cont">
+    
+        
+        <!-- <input id="search-input"  type="text"> -->
+        <!-- <button class="search-btn">Search</button> -->
+        <table class="gana_table">
+          <tr class="Header_gana">
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Address</td>
+            <td>Phone</td>
+            <td>Age</td>
+            <td>Gender</td>
+            <td>Marital status</td>
+            <td>Salary</td>
+            </tr>
+    
+          <tbody id="myTable2">
+              
+          </tbody>
+      </table>
+      <script >
+        var myArray = [
+        {'ID':'20207008','Name':'Mostafa','Email':'mostafa245@gmail.com', 'Address':'mohamed hosney st','Phone':'01557102102', 'Age':'21', 'Gender':'Male',  'Marital_Stauts':'Married','Salary':'3000'},
+        {'ID':'20207077','Name':'Ahmed','Email':'Ahmed56@gmail.com', 'Address':'hafez hassan st','Phone':'0108445342', 'Age':'32', 'Gender':'Male',  'Marital_Stauts':'Married','Salary':'3500'},
+        {'ID':'20207048','Name':'Mona','Email':'Mona89@gmail.com', 'Address':'ali mahmoud st','Phone':'01186702102', 'Age':'31', 'Gender':'Female',  'Marital_Stauts':'Married','Salary':'4000'},
+        {'ID':'20207045','Name':'Yousef','Email':'Yousef23@gmail.com', 'Address':'9 st','Phone':'0122988655', 'Age':'27', 'Gender':'Male',  'Marital_Stauts':'Single','Salary':'2000'},
+        {'ID':'20205023','Name':'Peter','Email':'Peter14@gmail.com', 'Address':'Haram','Phone':'01056554950', 'Age':'22', 'Gender':'Male',  'Marital_Stauts':'Divorced','Salary':'3800'},
+        {'ID':'20205044','Name':'Alaa','Email':'Alaa153@gmail.com', 'Address':'nasr city','Phone':'01063735350', 'Age':'27', 'Gender':'Female',  'Marital_Stauts':'Single','Salary':'4200'},
+        
+    ]
+
+    // var myArray = JSON.parse(localStorage.getItem("myArray")) || [];
+    $('#search-input2').on('keyup',function(){
+        var value=$(this).val()
+    
+        
+    
+        var data=searchTable(value,myArray);
+        buildTable2(data)
+    
+    })
+    buildTable2(myArray)
+        </script>
+     
+      </div>
+    <div class="buttons_div">
+
+   
+    <button onclick="window.location.href = 'Add_Employee.html';" class="btn-add">Add new employee</button>
+    <button onclick="window.location.href = 'Edit_Employee.html';" class = "btn-edit">Edit employees</button>
+  </div>
+    
+
+</body>

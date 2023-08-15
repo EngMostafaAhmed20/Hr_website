@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME PAGE</title>
+ <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/master.css">
+
+
+  <script src="JS/java.js"></script>
+
+
+
+
+<body class="layer" onload="loadNavbar('old')">
+
+  <div id="navbar-container">
+  </div>
+
+
+<div class="layer2" id="overlay"> 
+ 
+  <div class="container_peter">
+    <!-- <label for="show" class="close-btn fas fa-times" title="close"></label> -->
+    <button class="close" onclick="hideForm('overlay');">x</button>
+    
+    <div class="text_peter">
+       Sign in
+    </div>
+    <form  action="#" method="get" id="signin-form">
+       <div class="data_peter">
+          <label>Username</label>
+        
+          <input type="text" id="usernameinput"  placeholder="your username" >
+          <!-- oninput="validateUsername();"> -->
+       
+
+       </div>
+
+       <div class="data_peter">
+          <label>Password</label>
+          <input id="passwordinput" type="password"  placeholder="your password" minlength="8" > 
+          
+          
+          <span  id="Passworderror"></span>
+       </div>
+        
+       <div class="btn_peter">
+          <div class="inner"></div>
+         <button id="submit-button" type="submit"  >Sign in</button>
+          
+ 
+       </div>
+    </form>
+
+ </div>
+</div>
+
+<header>
+
+  <div class="home-content-about">
+
+    <h1 class="about_h1">WELCOME </h1><br>
+    <h2 class="animated_h2">to </h2><br>
+
+    <div class="home-content-icons ">
+
+      <ul class="list-unstyled d-flex  justify-content-around align-items-center text-center text-white ">
+        <li>
+          <div class="iconDiv">
+            <i class=" fa-brands fa-facebook "></i>
+          </div>
+        </li>
+
+        <li>
+          <div class="iconDiv">
+            <i class="fa-brands fa-square-twitter  "></i>
+          </div>
+        </li>
+
+        <li>
+          <div class="iconDiv">
+            <i class="fa-brands fa-linkedin  "></i>
+          </div>
+
+        </li>
+
+        <li>
+          <div class="iconDiv">
+            <i class="fa-brands fa-behance  "></i>
+          </div>
+          
+        </li>
+
+        <li>
+          <div class="iconDiv">
+            <i class="fa-brands fa-square-youtube"></i>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+
+</header>
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  // the sign in process represent in this function if the user enter the username and password correct the new navbar will appear and the form will hidded
+  //else the data entered not correct the error will appear till be correct
+function signIn() {
+    var username = document.getElementById("usernameinput").value;
+    var password = document.getElementById("passwordinput").value;
+  
+    if (username === "Mostafa" && password === "password123") {
+      // username and password are correct, load the new nav bar
+      loadNavbar();
+      hideForm('overlay');
+    } else {
+      // username and password are incorrect, display an error message
+      var errorMessage = document.getElementById("Passworderror");
+      errorMessage.innerHTML = "Invalid username or password.";
+    }
+  }
+  var signinForm = document.getElementById("signin-form");
+signinForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  signIn();
+});
+
+
+
+</script>
+
+
+</body>
+</html>

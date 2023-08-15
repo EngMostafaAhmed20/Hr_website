@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+ <head>
+  <link rel="stylesheet" href="Css/master.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <script src="JS/java.js"></script>
+  <title>Vacation Requests</title>
+  </head>
+
+<body onload="loadNavbar()">
+
+  <div id="navbar-container"></div>
+  
+  
+  
+  
+  <table class="gana_table">
+    <tr class="Header_gana">
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Total Days</th>
+      <th>Reason</th>
+      <th>Status</th>
+
+
+  </tr>
+    <tbody id="vac_table">
+      
+       
+    </tbody >
+
+</table>
+
+<div id="loader"></div>
+<script>
+
+
+
+
+            
+
+
+var data = [
+  {'ID':'20207008','Name':'Mostafa','From':'15/3', 'To':'20/3','Total':'5', 'Reason':'Family vacation', 'Status':'',},
+  {'ID':'20207003','Name':'Gana','From':'13/3', 'To':'17/3','Total':'4', 'Reason':'Training', 'Status':''},
+  {'ID':'20207012','Name':'Yousef','From':'15/4', 'To':'20/4','Total':'5', 'Reason':'Improve physical health', 'Status':''},
+  {'ID':'20217022','Name':'Peter','From':'26/4', 'To':'29/4','Total':'3', 'Reason':'Wedding anniversary', 'Status':''},
+  {'ID':'20217002','Name':'Julia','From':'15/3', 'To':'20/3','Total':'5', 'Reason':'Visiting family abroad', 'Status':''},
+
+]
+
+build_Vac_Table(data);
+
+var buttons = document.querySelectorAll("button");
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function() {
+    replaceWithText(this);
+  });
+}
+
+
+</script>
+
+ </body>
+ </html>

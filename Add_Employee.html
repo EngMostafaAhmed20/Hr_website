@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add New Employee</title>
+    
+    
+    <!-- External Style -->
+    <link rel="stylesheet" href="Css/master.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <script src="JS/java.js"></script>
+    
+  </head>
+  <body class="body_mostafa2" onload="loadNavbar()">
+
+   
+
+    <div id="navbar-container">
+      
+               
+
+
+    </div>
+    <div id="greatdiv">
+
+
+   
+   <div id="divoform">
+
+   
+    <form id="emp_form" action="" method="post"  onsubmit="return validateForm()">
+      <div id="Add_new_div">
+        <h1 class="h1_mostafa2">Add new employee.</h1>
+        
+      </div>
+      
+      <div >
+        
+        <input class="box" type="text" required name="ID" autofocus minlength="8" maxlength="8" placeholder="Employee ID" ID="EmpID"> 
+         <!--name="ID" for sent attributes to the server-->
+         <div class ="error_box" id="IDerror" ></div>
+      </div>
+      <br>
+      <div >
+        
+        <input class="box" type="text" required name="name" placeholder="Name" ID="NameOfEmp">
+        <div class ="error_box" id="NameOfEmp_error" ></div>
+      </div>
+      <br>
+      <div >
+        
+        <input class="box" type="email"  placeholder="Email@gmail.com"  name="mail" ID="Emp_Email"> <!--must write @,no submit without it,va= -->
+      </div>
+      <br>
+      <div >
+        
+        <input class="box" type="text" required name="Address" placeholder="Address" ID="Emp_Address">
+      </div>
+      <br>
+      <div >
+       
+        <input class="box" type="tel" required  name="Phone" minlength="11" placeholder="Phone number" ID="Emp_Number">
+      </div>
+      <br>
+      
+      <div class="box">
+        <label>Gender</label>
+        <br>
+        <input id="M"  type="radio"   name="gender" checked >  <!--id for connect the label-->
+        <label for="M"> Male </label>
+        <input id="F"  type="radio"   name="gender" >
+        <label for="F"> Female </label>
+      </div>
+      <br>
+      <div > 
+        <div>
+          <label class="box">Marital status</label>
+        </div>
+        
+        <select class="box" required name="Marital status" ID="Emp_select">
+          <option value="1" selected>Single</option>
+          <option value="2">Married</option>
+          <option value="3">divorced</option>
+          <option value="4">separated</option>
+          <option value="5">widowed</option>
+        </select>
+      </div>
+      <br>
+      <div >
+        <!-- <label>Salary</label> -->
+        <input class="box" type="number"   name="Salary" min="0" max ='10000'placeholder="Salary" ID="Emp_Salary">
+      </div>
+      <br>
+      <div >
+        <!-- <label>Vacation Days</label> -->
+        <input class="box" type="number" required  name="Days" min="0" max="14" placeholder="Vacation Days" ID="Emp_days">
+      </div>
+     
+      <br>
+      <div >
+        <div class="box">
+          <label >Date of Birth</label>
+        </div>
+        
+        <input class="box" type="date" name="number" min="1963-04-28" max="2005-04-28" step="1" ID="Emp_age" required>
+      </div>
+      <br>
+     <div class="box">
+      <input class="button_mostafa2" type="submit" value="Save"  >
+
+     </div>
+      
+    </form>
+  </div>
+</div>
+
+
+<!-- <script>
+  const ID=document.getElementById("EmpID");
+  const Name=document.getElementById("NameOfEmp");
+  const Email=document.getElementById("Emp_Email");
+  const Address=document.getElementById("Emp_Address");
+  const Phone=document.getElementById("Emp_Number");
+  const Gender=document.getElementById("M");
+  const Marital=document.getElementById("Emp_select");
+  const Salary=document.getElementById("Emp_Salary");
+  const Days=document.getElementById("Emp_days");
+  const DOB= document.getElementById("Emp_age");
+
+  localStorage.setItem("ID",ID);
+  localStorage.setItem("Name",Name);
+  localStorage.setItem("Email",Email);
+  localStorage.setItem("Address",Address );
+  localStorage.setItem("Phone",Phone);
+  localStorage.setItem("Gender",Gender);
+  localStorage.setItem("Marital Status",Marital);
+  localStorage.setItem("Salary",Salary);
+  localStorage.setItem("Vacation Days",Days);
+  localStorage.setItem("Date Of Birth",DOB);
+
+
+  console.log(localStorage);
+  
+</script> -->
+   
+
+
+
+  </body>
+</html>
